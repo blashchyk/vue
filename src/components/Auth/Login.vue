@@ -59,13 +59,14 @@
         ]
       }
     },
-    methods () {
+    methods: {
       onSubmit () {
         if (this.$refs.form.validate()) {
           const user = {
             email: this.email,
             password: this.password
           }
+          console.log(user)
         }
       }
     }
