@@ -68,7 +68,6 @@
         confirmPasswordRules: [
           v => !!v || 'Password is required',
           v => v === this.password || 'Password should match'
-
         ]
       }
     },
