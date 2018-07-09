@@ -44,9 +44,9 @@
       return {
         orders: [
           {
-            id: 'sck1',
+            id: '1',
             name: 'Dmitriy',
-            phone: '050505055',
+            phone: '068-448-09-62',
             adId: '123',
             done: false
           }
