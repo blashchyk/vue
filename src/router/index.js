@@ -13,12 +13,13 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'home',
       component: Home
     },
     {
       path: '/ad/:id',
+      props: true,
       name: 'ad',
       component: Ad
     },
@@ -39,7 +40,7 @@ export default new Router({
     },
     {
       path: '/registration',
-      name: 'registration',
+      name: 'reg',
       component: Registration
     },
     {

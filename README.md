@@ -1,4 +1,4 @@
-# vue.loc
+# ad-project
 
 > A Vue.js project
 

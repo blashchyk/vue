@@ -1,42 +1,57 @@
-export default  {
+export default {
   state: {
     ads: [
       {
-        title: 'Image1',
-        description: 'Description1',
+        title: 'First ad',
+        description: 'Hello i am description',
         promo: false,
-        imgSrc: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-        id: 123
+        imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/planet.jpg',
+        id: '123'
       },
       {
-        title: 'Image2',
-        description: 'Description2',
+        title: 'Second ad',
+        description: 'Hello i am description',
         promo: true,
-        imgSrc: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-        id: 234
+        imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/planet.jpg',
+        id: '1234'
       },
       {
-        title: 'Image3',
-        description: 'Description3',
+        title: 'Third ad',
+        description: 'Hello i am description',
         promo: true,
-        imgSrc: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-        id: 567
+        imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/sky.jpg',
+        id: '12345'
       }
     ]
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    createAd (state, payload) {
+      state.ads.push(payload)
+    }
+  },
+  actions: {
+    createAd ({commit}, payload) {
+      payload.id = 'qqwqweqweqw'
+
+      commit('createAd', payload)
+    }
+  },
   getters: {
     ads (state) {
       return state.ads
     },
-    promoAds(state) {
+    promoAds (state) {
       return state.ads.filter(ad => {
         return ad.promo
       })
     },
     myAds (state) {
       return state.ads
+    },
+    adById (state) {
+      return adId => {
+        return state.ads.find(ad => ad.id === adId)
+      }
     }
   }
 }
